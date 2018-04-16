@@ -39,6 +39,7 @@ public class Menu {
 			if (buttons[i] instanceof PermissionButton) {
 				int relPage = Default.getRelativePage(page, i);
 				((PermissionButton) buttons[i]).setRelativeGroup(Groups.getGroup(relPage));
+				((PermissionButton) buttons[i]).setCurrentPage(page);
 			} else if (buttons[i] instanceof ScrollButton) {
 				boolean up = Default.getRelativePage(1, i) == 0;
 				((ScrollButton) buttons[i]).setup(up, page);

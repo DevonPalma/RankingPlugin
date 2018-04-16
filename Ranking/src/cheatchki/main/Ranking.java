@@ -9,12 +9,14 @@ import cheatchki.main.managers.EventManager;
 import cheatchki.main.managers.MenuManager;
 import cheatchki.main.managers.files.ItemsFileManager;
 import cheatchki.main.managers.files.RanksFileManager;
+import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
 
 public class Ranking extends JavaPlugin {
 	
 	private static Ranking instance;
 	private static Permission perms;
+	private static Economy eco;
 	
 	
 	public void onEnable() {
@@ -25,6 +27,7 @@ public class Ranking extends JavaPlugin {
 		RanksFileManager.init();
 		ItemsFileManager.init();
 		perms = Bukkit.getServicesManager().getRegistration(Permission.class).getProvider();
+		eco = Bukkit.getServicesManager().getRegistration(Economy.class).getProvider();
 	}
 	
 	public void onDisable() {
@@ -37,5 +40,9 @@ public class Ranking extends JavaPlugin {
 	
 	public static Permission getPermission() {
 		return perms;
+	}
+	
+	public static Economy getEconomy() {
+		return eco;
 	}
 }
