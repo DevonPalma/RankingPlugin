@@ -1,0 +1,7 @@
+main: cheatchki.main.Ranking
+name: Ranking
+version: 0.0.0
+author: cheatchki
+description: needed
+commands:
+  rank:
