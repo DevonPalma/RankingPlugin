@@ -5,3 +5,4 @@ author: cheatchki
 description: needed
 commands:
   rank:
+    alliases: [rankup]
