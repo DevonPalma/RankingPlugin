@@ -1,0 +1,239 @@
+# --------- GUI.yml --------- #
+# the size MUST be 9, 27, or 45
+# if not there will be an error
+# and the plugin will act super 
+# wonky.
+# 
+# valid slotTypes:
+#    Permission, Frame, Empty, 
+#    Scroll, Focus
+# 
+# some slotTypes will required
+# additional info which I would
+# suggest, set the slot to the 
+# type you want it to be, then
+# reload/restart server and then
+# come back into this file to 
+# set the extra info
+
+
+guiDefaults:
+  size9:
+    slot0:
+      type: Permission
+      offset: 0
+    slot1:
+      type: Permission
+      offset: 0
+    slot2:
+      type: Permission
+      offset: 0
+    slot3:
+      type: Permission
+      offset: 0
+    slot4:
+      type: Permission
+      offset: 0
+    slot5:
+      type: Permission
+      offset: 0
+    slot6:
+      type: Permission
+      offset: 0
+    slot7:
+      type: Empty
+    slot8:
+      type: Focus
+  size27:
+    slot0:
+      type: Permission
+      offset: -1
+    slot1:
+      type: Permission
+      offset: -1
+    slot2:
+      type: Permission
+      offset: -1
+    slot3:
+      type: Permission
+      offset: -1
+    slot4:
+      type: Permission
+      offset: -1
+    slot5:
+      type: Permission
+      offset: -1
+    slot6:
+      type: Permission
+      offset: -1
+    slot7:
+      type: Empty
+    slot8:
+      type: Scroll
+      direction: up
+    slot9:
+      type: Permission
+      offset: 0
+    slot10:
+      type: Permission
+      offset: 0
+    slot11:
+      type: Permission
+      offset: 0
+    slot12:
+      type: Permission
+      offset: 0
+    slot13:
+      type: Permission
+      offset: 0
+    slot14:
+      type: Permission
+      offset: 0
+    slot15:
+      type: Permission
+      offset: 0
+    slot16:
+      type: Empty
+    slot17:
+      type: Focus
+    slot18:
+      type: Permission
+      offset: 1
+    slot19:
+      type: Permission
+      offset: 1
+    slot20:
+      type: Permission
+      offset: 1
+    slot21:
+      type: Permission
+      offset: 1
+    slot22:
+      type: Permission
+      offset: 1
+    slot23:
+      type: Permission
+      offset: 1
+    slot24:
+      type: Permission
+      offset: 1
+    slot25:
+      type: Empty
+    slot26:
+      type: Scroll
+      direction: down
+  size45:
+    slot0:
+      type: Frame
+    slot1:
+      type: Frame
+    slot2:
+      type: Frame
+    slot3:
+      type: Frame
+    slot4:
+      type: Frame
+    slot5:
+      type: Frame
+    slot6:
+      type: Frame
+    slot7:
+      type: Frame
+    slot8:
+      type: Frame
+    slot9:
+      type: Permission
+      offset: -1
+    slot10:
+      type: Permission
+      offset: -1
+    slot11:
+      type: Permission
+      offset: -1
+    slot12:
+      type: Permission
+      offset: -1
+    slot13:
+      type: Permission
+      offset: -1
+    slot14:
+      type: Permission
+      offset: -1
+    slot15:
+      type: Permission
+      offset: -1
+    slot16:
+      type: Empty
+    slot17:
+      type: Scroll
+      direction: up
+    slot18:
+      type: Permission
+      offset: 0
+    slot19:
+      type: Permission
+      offset: 0
+    slot20:
+      type: Permission
+      offset: 0
+    slot21:
+      type: Permission
+      offset: 0
+    slot22:
+      type: Permission
+      offset: 0
+    slot23:
+      type: Permission
+      offset: 0
+    slot24:
+      type: Permission
+      offset: 0
+    slot25:
+      type: Empty
+    slot26:
+      type: Focus
+    slot27:
+      type: Permission
+      offset: 1
+    slot28:
+      type: Permission
+      offset: 1
+    slot29:
+      type: Permission
+      offset: 1
+    slot30:
+      type: Permission
+      offset: 1
+    slot31:
+      type: Permission
+      offset: 1
+    slot32:
+      type: Permission
+      offset: 1
+    slot33:
+      type: Permission
+      offset: 1
+    slot34:
+      type: Empty
+    slot35:
+      type: Scroll
+      direction: down
+    slot36:
+      type: Frame
+    slot37:
+      type: Frame
+    slot38:
+      type: Frame
+    slot39:
+      type: Frame
+    slot40:
+      type: Frame
+    slot41:
+      type: Frame
+    slot42:
+      type: Frame
+    slot43:
+      type: Frame
+    slot44:
+      type: Frame
+  size: 45

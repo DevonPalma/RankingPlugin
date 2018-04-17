@@ -1,0 +1,28 @@
+# ------------ eco.yml ------------ #
+# 
+# The Default Path MUST be set
+# if it is set to a valid group path
+# (which for now must be from permissionsEx)
+# then all the groups will be generated
+# and all the info required for them!
+# 
+# 
+# example
+#   GroupName:
+#       permission: the permission a user will gain from buying this permission
+#       price: the cost of the permission
+#       requirements: a list of requirements a user must meet
+#           ingroup: <groupname> - basically if a player is in this group its true
+#           hasperm: <perm name> - like above, player requires this permission
+#       description: a short description of what the perm gives like for example "allows access to flight
+# 
+#   Beta:
+#       permission: ExamplePerm.Beta.test
+#       price: 50.0
+#       requirements:
+#       - ingroup: Beta
+#       - hasperm: ExamplePerm.Alpha.test
+#       description: allows access to /beta test
+
+DefaultPath: 'basic'
+groups: {}

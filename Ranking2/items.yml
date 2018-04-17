@@ -1,0 +1,142 @@
+# --------- items.yml --------- #
+# 
+# 
+# --- PermissionButton ---
+# Item:
+#    material: the material of the item (ex. Diamond)
+#    damage: the material of the item, (Ex. for wool, to get the color red, youd put 14)
+#    name: the name of the item
+#    lore: the lore of the item: to insert a new line of lore, use %n%
+# 
+# variables:
+#   defaults (gotten from eco.yml)
+#       %permission%
+#           - the required permission for the item
+#       %price% 
+#           - the price of the permission
+#       %requirement% 
+#           - the requirements needed (Only suggested in lore, as it splits into a list)
+#       %description% 
+#           - the description of an item
+#   variable
+#       - these are special types of base variables, they will convert themself's to special names
+#         for example if you had %material-%GP% and the player has all the requirements but not a perm 
+#         this would switch to %material-hasGroup%
+#         
+# 
+#       %offset% 
+#           - this is the offset from the center of the GUI;
+#             for example if you had 5 rows, row's 1 offset would be 
+#             2, because 3 - 1 = 2; 
+#       %GP% 
+#           - this is a variable name which can either be 
+#             hasPerm - the player already owns the permission which is recieved from 
+#                       buyable permission
+#             hasGroup - this is if the player meets all the requirements of x item as
+#                        defined in eco.yml
+#             hasBoth - hasPerm and hasGroup are met
+#             hasNeither - neither hasPerm nor hasGroup are met
+# 
+# How to make a variable:
+#   VariableName:
+#     base: 
+#         - this is the only required permission, this will basically tell the variable how to format itself
+#           for example - %material% becomes %material-base%. if material-base isn't set, then the item's material
+#           will become null, which will throw an error
+#     secondaryVariableName:
+#         - here you can define whatever name you want, to reference this variable you
+#           use %VariableName-secondaryVariableName%, 
+
+
+PermissionButton:
+  Item:
+    material: '%material%'
+    damage: '%damage%'
+    name: '%name%'
+    lore: '%lore%'
+  Variables:
+    material:
+      base: '%material-%offset%%'
+      offset1: STAINED_GLASS
+      offset0: STAINED_GLASS_PANE
+    damage:
+      base: '%damage-%GP%%'
+      hasBoth: '%damage-hasPerm%'
+      hasPerm: '5'
+      hasGroup: '4'
+      hasNeither: '14'
+    name:
+      base: '%name-%GP%%'
+      hasBoth: '%name-hasPerm%'
+      hasPerm: '&a&lOwned'
+      hasGroup: '&e&lAvailable'
+      hasNeither: '&4&lLocked'
+    lore:
+      base: '%lore-%GP%%'
+      hasBoth: '%lore-hasPerm%'
+      hasPerm: '%lore-hasGroup%'
+      hasGroup: '%lore-price%%n%%lore-description%'
+      hasNeither: '%lore-requirements%%n%%lore-hasGroup%'
+      description: '&6Unlocks:%n% &6- &e%permission%'
+      price: '&6Cost: &e%price%'
+      requirements: '&6Requires:%n% - &e%requirement%'
+FrameButton:
+  Item:
+    material: '%material%'
+    damage: '%damage%'
+    name: '%name%'
+    lore: '%lore%'
+  Variables:
+    material:
+      base: STAINED_GLASS_PANE
+    damage:
+      base: '7'
+    name:
+      base: '&f'
+    lore:
+      base: ''
+EmptyButton:
+  Item:
+    material: '%material%'
+    damage: '%damage%'
+    name: '%name%'
+    lore: '%lore%'
+  Variables:
+    material:
+      base: STAINED_GLASS_PANE
+    damage:
+      base: '8'
+    name:
+      base: '&f'
+    lore:
+      base: ''
+ScrollButton:
+  Item:
+    material: '%material%'
+    damage: '%damage%'
+    name: '%name%'
+    lore: '%lore%'
+  Variables:
+    material:
+      base: NETHER_STAR
+    damage:
+      base: '0'
+    name:
+      base: '&6Scroll %direction%'
+    lore:
+      base: '&6To: &e%toGroup%'
+FocusButton:
+  Item:
+    material: '%material%'
+    damage: '%damage%'
+    name: '%name%'
+    lore: '%lore%'
+  Variables:
+    material:
+      base: EMERALD
+    damage:
+      base: '0'
+    name:
+      base: '&6Focus'
+    lore:
+      base: '&6To: &e%toGroup%'
