@@ -18,6 +18,7 @@
 
 
 guiDefaults:
+  size: 45
   size9:
     slot0:
       type: Permission
@@ -236,4 +237,3 @@ guiDefaults:
       type: Frame
     slot44:
       type: Frame
-  size: 45

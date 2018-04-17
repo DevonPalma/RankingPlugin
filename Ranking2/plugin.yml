@@ -3,6 +3,7 @@ name: Ranking
 version: 0.0.0
 author: cheatchki
 description: needed
+depend: [PermissionsEx, Vault]
 commands:
   rank:
     alliases: [rankup]

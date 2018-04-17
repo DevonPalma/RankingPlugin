@@ -42,37 +42,45 @@ public abstract class FileManager {
 	}
 	
 	public void loadFiles(String fileName) {
+//		file = new File(Ranking.getInstance().getDataFolder(), fileName);
+//		Ranking.getInstance().getLogger().warning(file.getAbsolutePath());
+//		if (!file.exists()) {
+////			try {
+////				file.createNewFile();
+////			} catch (IOException e1) {
+////				e1.printStackTrace();
+////			}
+//			Ranking.getInstance().getLogger().warning("File \"" + fileName + "\" hasn't been generated, generating now!");
+//			InputStream input = null;
+//			OutputStream output = null;
+//			try {
+//				input = Ranking.getInstance().getResource(fileName);
+//				output = new FileOutputStream(file);
+//				int read = 0;
+//				byte[] bytes = new byte[1024];
+//				while ((read = input.read(bytes)) != -1)
+//					output.write(bytes, 0, read);
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			} finally {
+//				if (input != null) {
+//					try {
+//						input.close();
+//					} catch (IOException e) {
+//						e.printStackTrace();
+//					}
+//				}
+//				if (output != null) {
+//					try {
+//						output.close();
+//					} catch (IOException e) {
+//						e.printStackTrace();
+//					}
+//				}
+//			}
+//		}
+		Ranking.getInstance().saveResource(fileName, false);
 		file = new File(Ranking.getInstance().getDataFolder(), fileName);
-		if (!file.exists()) {
-			Ranking.getInstance().getLogger().warning("File \"" + fileName + "\" hasn't been generated, generating now!");
-			InputStream input = null;
-			OutputStream output = null;
-			try {
-				input = Ranking.getInstance().getResource(fileName);
-				output = new FileOutputStream(file);
-				int read = 0;
-				byte[] bytes = new byte[1024];
-				while ((read = input.read(bytes)) != -1)
-					output.write(bytes, 0, read);
-			} catch (IOException e) {
-				e.printStackTrace();
-			} finally {
-				if (input != null) {
-					try {
-						input.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-				if (output != null) {
-					try {
-						output.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-			}
-		}
 		config = YamlConfiguration.loadConfiguration(file);
 	}
 	

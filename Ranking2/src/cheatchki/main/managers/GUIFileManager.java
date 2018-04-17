@@ -29,7 +29,7 @@ public class GUIFileManager extends FileManager {
 
 	@Override
 	public void setDefaults() {
-		Options.setSize(config.getInt("size"));
+		Options.setSize(config.getInt("guiDefaults.size"));
 		for (int x = 1; x <= 5; x += 2) {
 			for (int y = 0; y < 9 * x; y++) {
 				String index = "guiDefaults.size" + x*9 + ".slot" + y + ".";
