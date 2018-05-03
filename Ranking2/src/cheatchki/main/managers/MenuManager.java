@@ -41,12 +41,12 @@ public class MenuManager {
 	}
 	
 	public void clickEvent(InventoryClickEvent e) {
-		Menu m = menus.get((Player) e.getWhoClicked());
+		Menu m = menus.get(e.getWhoClicked());
 		if (m != null)
 			m.click(e);
 	}
 	
 	public void closeEvent(InventoryCloseEvent e) {
-		menus.remove((Player) e.getPlayer());
+		menus.remove(e.getPlayer());
 	}
 }

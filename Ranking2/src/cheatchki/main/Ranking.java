@@ -22,6 +22,7 @@ public class Ranking extends JavaPlugin {
 	private static Economy eco;
 	
 	
+	@Override
 	public void onEnable() {
 		instance = this;
 
@@ -42,6 +43,7 @@ public class Ranking extends JavaPlugin {
 		
 	}
 	
+	@Override
 	public void onDisable() {
 		
 	}

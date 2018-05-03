@@ -1,7 +1,6 @@
 package cheatchki.main.managers;
 
 import cheatchki.main.Options;
-import cheatchki.main.Ranking;
 import cheatchki.main.Utils;
 import cheatchki.main.menu.button.Button;
 import cheatchki.main.menu.button.EmptyButton;

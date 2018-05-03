@@ -110,7 +110,7 @@ public class ItemFileManager extends FileManager {
 	
 	public String permissionConvert(String toBeConverted, boolean hasGroup, boolean hasPerm, int offset, BuyablePermission perm) {
 		conversionMap.get("PermissionButton").put("%GP%", (hasPerm ? (hasGroup ? "hasBoth" : "hasPerm") : (hasGroup ? "hasGroup" : "hasNeither")));
-		conversionMap.get("PermissionButton").put("%offset%", "offset" + (int) Math.abs(offset));
+		conversionMap.get("PermissionButton").put("%offset%", "offset" + Math.abs(offset));
 
 		conversionMap.get("PermissionButton").put("%permission%", perm.getPermission());
 		conversionMap.get("PermissionButton").put("%price%", "" + perm.getPrice());
